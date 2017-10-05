@@ -49,8 +49,13 @@
 	
 	<script>
 		window.onload = function() {
-		  document.getElementsByClassName('mask').className = 'expand';
-		};
+		    var buttons = document.getElementsByClassName("mask"),
+		        len = buttons !== null ? buttons.length : 0,
+		        i = 0;
+		    for(i; i < len; i++) {
+		        buttons[i].className += " animate"; 
+		    }
+		}
 	</script>
 
 </body>
