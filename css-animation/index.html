@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animation reveal</title>
+
+	<style>
+		.mask {
+		  animation: fade 1s ease-in-out forwards;
+		  opacity: 1;
+		}
+		
+		/*.mask:nth-child(1) { animation-delay: 1s }*/
+		.mask:nth-child(2) { animation-delay: 0.5s }
+		.mask:nth-child(3) { animation-delay: 1.5s }
+		.mask:nth-child(4) { animation-delay: 2.5s }
+		.mask:nth-child(5) { animation-delay: 3.5s }
+		.mask:nth-child(6) { animation-delay: 4.5s }
+
+		@-webkit-keyframes fade {
+			0% { opacity: 1; }
+			100% { opacity: 0; }
+		}
+
+		@-moz-keyframes fade {
+			0% { opacity: 1; }
+			100% { opacity: 0; }
+		}
+
+		@-o-keyframes fade {
+			0% { opacity: 1; }
+			100% { opacity: 0; }
+		}
+
+		@keyframes fade {
+			0% { opacity: 1; }
+			100% { opacity: 0; }
+		}
+	</style>
+</head>
+<body style="position: relative; overflow: hidden;">
+	<div style="height: 100%; width: 100%; position: relative; overflow: hidden;">
+		<img src="images/diagram.jpg" style="max-width: 100%; height: auto;" alt="">
+		<div id="mask1" class="mask" style="width: 64%; background-color: white; height: 49%; position: absolute; top: 18%; left: 0;"></div>
+		<div id="mask2" class="mask" style="width: 26%; background-color: white; height: 29%; position: absolute; bottom: 5%; left: 0;"></div>
+		<div id="mask4" class="mask" style="width: 10%; background-color: white; height: 29%; position: absolute; bottom: 5%; left: 29%;"></div>
+		<div id="mask3" class="mask" style="width: 36%; background-color: white; height: 49%; position: absolute; top: 18%; right: 0;"></div>
+		<div id="mask5" class="mask" style="width: 11%; background-color: white; height: 29%; position: absolute; bottom: 5%; right: 36%;"></div>
+	</div>
+	
+</body>
+</html>
