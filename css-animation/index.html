@@ -55,6 +55,39 @@
 		    for(i; i < len; i++) {
 		        buttons[i].className += " animate"; 
 		    }
+
+		    var timeout, timing;
+
+		    var resetTimer = function() {
+		      clearTimeout(timeout);
+		      timeout = setTimeout(function(){alert("5 minute warning");}, 5*60*1000);
+		      console.log("jeelo");
+		      clearTimeout(timing);
+		      time = "00:00:00";
+		      timing = setTimeout(update, 1000);
+		    }
+
+		    document.onmousemove = resetTimer;
+		    document.onclick = resetTimer;
+
+		    var time = "00:00:00";
+
+		    function update() {
+	            var myTime = time;
+	            var ss = myTime.split(":");
+	            var dt = new Date();
+	            dt.setHours(ss[0]);
+	            dt.setMinutes(ss[1]);
+	            dt.setSeconds(ss[2]);
+	            
+	            var dt2 = new Date(dt.valueOf() + 1000);
+	            var ts = dt2.toTimeString().split(" ")[0];
+	            console.log(ts);
+	            time = ts;
+	            timing = setTimeout(update, 1000);
+	        }
+
+	        timing = setTimeout(update, 1000);
 		}
 	</script>
 
