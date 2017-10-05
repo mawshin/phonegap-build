@@ -6,7 +6,11 @@
 
 	<style>
 		.mask.fade-in {
-		  animation: leftFade 1s ease-in forwards;
+		  animation: leftFade 1.5s ease-out forwards;
+		}
+
+		img {
+			animation: fade 1s ease-out forwards;
 		}
 
 		.mask.animate {
@@ -14,6 +18,7 @@
 		}
 		
 		/*.mask:nth-child(1) { animation-delay: 1s }*/
+		img { animation-delay: 0.5s }
 		.mask:nth-child(2) { animation-delay: 0.5s }
 		.mask:nth-child(3) { animation-delay: 1.5s }
 		.mask:nth-child(4) { animation-delay: 2.5s }
@@ -21,47 +26,47 @@
 		.mask:nth-child(6) { animation-delay: 4.5s }
 
 		@-webkit-keyframes fade {
-			0% { opacity: 1; }
-			100% { opacity: 0; }
+			0% { opacity: 0; }
+			100% { opacity: 1; }
 		}
 
 		@-moz-keyframes fade {
-			0% { opacity: 1; }
-			100% { opacity: 0; }
+			0% { opacity: 0; }
+			100% { opacity: 1; }
 		}
 
 		@-o-keyframes fade {
-			0% { opacity: 1; }
-			100% { opacity: 0; }
+			0% { opacity: 0; }
+			100% { opacity: 1; }
 		}
 
 		@keyframes fade {
-			0% { opacity: 1; }
-			100% { opacity: 0; }
+			0% { opacity: 0; }
+			100% { opacity: 1; }
 		}
 
 		@-webkit-keyframes leftFade {
 			0% { opacity: 1; left: 0; }
-			75% { opacity: 0.75; }
-			100% { opacity: 0; left: 100%; }
+			75% { opacity: 1; }
+			100% { opacity: 1; left: 100%; }
 		}
 
 		@-moz-keyframes leftFade {
 			0% { opacity: 1; left: 0; }
-			75% { opacity: 0.75; }
-			100% { opacity: 0; left: 100%; }
+			75% { opacity: 1; }
+			100% { opacity: 1; left: 100%; }
 		}
 
 		@-o-keyframes leftFade {
 			0% { opacity: 1; left: 0; }
-			75% { opacity: 0.75; }
-			100% { opacity: 0; left: 100%; }
+			75% { opacity: 1; }
+			100% { opacity: 1; left: 100%; }
 		}
 
 		@keyframes leftFade {
 			0% { opacity: 1; left: 0; }
-			75% { opacity: 0.75; }
-			100% { opacity: 0; left: 100%; }
+			75% { opacity: 1; }
+			100% { opacity: 1; left: 100%; }
 		}
 	</style>
 </head>
