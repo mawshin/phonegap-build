@@ -5,9 +5,8 @@
 	<title>Animation reveal</title>
 
 	<style>
-		.mask {
+		.mask.animate {
 		  animation: fade 1s ease-in-out forwards;
-		  opacity: 1;
 		}
 		
 		/*.mask:nth-child(1) { animation-delay: 1s }*/
@@ -48,5 +47,11 @@
 		<div id="mask5" class="mask" style="width: 11%; background-color: white; height: 29%; position: absolute; bottom: 5%; right: 36%;"></div>
 	</div>
 	
+	<script>
+		window.onload = function() {
+		  document.getElementsByClassName('mask').className = 'expand';
+		};
+	</script>
+
 </body>
 </html>
